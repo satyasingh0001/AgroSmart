@@ -1,0 +1,11 @@
+.alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.alertsPage {
+  padding: 80px 20px 20px; /* 👈 top padding leaves space for navbar */
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,86 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --primary-color: #00796b;
+  --button-text: #ffffff;
+  --chatbot-bg: #ffffff;
+  --chatbot-user: #e1f5fe;
+  --chatbot-bot: #f1f8e9;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --navbar-bg: #1a1a1a;
+  --primary-color: #26a69a;
+  --button-text: #ffffff;
+  --chatbot-bg: #1e1e1e;
+  --chatbot-user: #004d40;
+  --chatbot-bot: #263238;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  line-height: 1.5;
+}
+
+body {
+  background: var(--bg-color); /* 👈 controlled by theme */
+  color: var(--text-color);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Ensure root containers also use bg */
+#root {
+  min-height: 100vh;
+  background: var(--bg-color); /* 👈 apply same background */
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;   /* 👈 full page bg */
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --navbar-bg: #1a1a1a;
+  --primary-color: #26a69a;
+  --button-text: #ffffff;
+  --chatbot-bg: #1e1e1e;
+  --chatbot-user: #004d40;
+  --chatbot-bot: #263238;
+}
+
+.pageWrapper {
+  padding: 80px 20px 20px; /* leaves space for navbar */
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Smooth transitions for theme switching */
+body, #root, .pageWrapper, .navbar, button {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary-color);
+  color: var(--button-text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #1e9e8e;
+  transform: translateY(-2px);
+}

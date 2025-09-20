@@ -1,0 +1,13 @@
+.card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
